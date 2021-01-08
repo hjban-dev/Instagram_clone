@@ -20,6 +20,7 @@ const InputBoxStyled = styled.div`
 		height: 36px;
 		background-color: #fafafa;
 		border-radius: 3px;
+		border: 1px solid #dbdbdb;
 		label {
 			position: absolute;
 			left: 8px;

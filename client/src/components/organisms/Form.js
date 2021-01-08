@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import InputBox from "../molecules/InputBox";
-import Button from "../atoms/Button";
+function Form(props) {
+	const { children } = props;
 
-import data from "../../assets/data/RegisterData";
-
-function Form() {
-	const inputList = data.inputList.map((input, idx) => <InputBox key={idx} label={input.label} idx={idx} />);
+	const inputList = props.inputList.map((input, idx) => <InputBox key={idx} label={input.label} idx={idx} />);
 
 	return (
 		<FormStyled>
 			{inputList}
-			<Button>가입</Button>
+			{children}
 		</FormStyled>
 	);
 }

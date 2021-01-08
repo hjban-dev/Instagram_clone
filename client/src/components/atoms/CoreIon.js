@@ -3,7 +3,7 @@ import styled from "styled-components";
 import IconImg from "../../assets/images/common/core_icon.png";
 
 function CoreIon(props) {
-	console.log(props);
+	// console.log(props);
 	return <CoreIconStyled {...props}></CoreIconStyled>;
 }
 

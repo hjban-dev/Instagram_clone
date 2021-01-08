@@ -12,10 +12,12 @@ const H1Styled = styled.h1`
 	text-indent: 110%;
 	text-align: center;
 	overflow: hidden;
+	padding: ${(props) => props.padding};
+	margin: 0 0 12px 0;
 `;
 
 const H2Styled = styled.h2`
-	margin: 16px 0 10px;
+	margin: 0 0 10px;
 	font-size: 17px;
 	font-weight: 600;
 	text-align: center;

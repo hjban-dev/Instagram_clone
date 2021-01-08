@@ -7,7 +7,9 @@ import A from "../atoms/A";
 function FooterNav() {
 	const FootetList = data.footerList.map((list, idx) => (
 		<li key={idx}>
-			<A desc={list.desc} link={list.link} title={list.title} />
+			<A link={list.link} title={list.title}>
+				{list.desc}
+			</A>
 		</li>
 	));
 

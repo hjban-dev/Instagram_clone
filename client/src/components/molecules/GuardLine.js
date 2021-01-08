@@ -13,6 +13,7 @@ function GuardLine() {
 const LindStyled = styled.div`
 	position: relative;
 	width: 100%;
+	margin: 10px 0 18px;
 	::before,
 	::after {
 		content: "";
@@ -25,7 +26,7 @@ const LindStyled = styled.div`
 		height: 1px;
 	}
 	::after {
-		left: 100px;
+		left: 58%;
 	}
 	p {
 		font-size: 13px;

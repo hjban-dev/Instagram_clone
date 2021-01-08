@@ -6,8 +6,8 @@ import P from "../atoms/P";
 function FooterCopy() {
 	return (
 		<CopyStyled>
-			<P class="language" txt={data.languageInfo.title} />
-			<P class="copy" txt={data.copyInfo.desc} />
+			<P className="language">{data.languageInfo.title}</P>
+			<P className="copy"> {data.copyInfo.desc}</P>
 		</CopyStyled>
 	);
 }
