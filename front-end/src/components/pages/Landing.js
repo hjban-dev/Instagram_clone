@@ -4,6 +4,7 @@ import LoginPage from "./LoginPage";
 
 export class Landing extends Component {
 	render() {
+		// console.log(this.props);
 		return (
 			<>
 				<LoginPage />

@@ -1,7 +1,7 @@
 import React from "react";
 
-function Input(props) {
-	return <input id={props.id} type={props.type} />;
-}
+const Input = React.forwardRef((props, ref) => {
+	return <input id={props.id} type={props.type} ref={ref} required />;
+});
 
 export default Input;

@@ -17,10 +17,13 @@ function AppDown() {
 		<AppDownStyled>
 			<P {...PStyled}>앱을 다운로드하세요. </P>
 			<div>
-				<A link="/" title="애플 앱 다운로드">
+				<A link="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo" title="애플 앱 다운로드">
 					<img src={ImgApple} alt="" />
 				</A>
-				<A link="/" title="구글 앱 다운로드">
+				<A
+					link="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DB7EE808D-0B95-49DC-BC2C-EC4A89C662D6%26utm_content%3Dlo%26utm_medium%3Dbadge"
+					title="구글 앱 다운로드"
+				>
 					<img src={ImgGoogle} alt="" />
 				</A>
 			</div>

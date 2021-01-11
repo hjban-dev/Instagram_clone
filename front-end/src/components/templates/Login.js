@@ -3,7 +3,6 @@ import styled from "styled-components";
 import A from "../atoms/A";
 import P from "../atoms/P";
 import AppDown from "../molecules/AppDown";
-import FormBox from "../organisms/FormBox";
 import Form from "../organisms/Form";
 import GuardLine from "../molecules/GuardLine";
 import FormTitle from "../molecules/FormTitle";
@@ -38,11 +37,7 @@ export class Login extends Component {
 			<section>
 				<article className="art_box">
 					<FormTitle page="login" />
-					<Form inputList={data.inputList}>
-						<Button margin="12px 0 16px 0" backgroundColor="#b2dffc">
-							로그인
-						</Button>
-					</Form>
+					<Form inputList={data.inputList} page="login"></Form>
 					<GuardLine />
 					<Button margin="16px 0" color="#385185" backgroundColor="#fff">
 						<CoreIon {...CoreFacebookStyle} />
