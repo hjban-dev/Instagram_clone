@@ -22,9 +22,10 @@ mongoose
 	.then(() => console.log("MongoDB connected..."))
 	.catch((err) => console.log(err));
 
-app.use("/users", require("./server/routes/users"));
+app.use("/api/users", require("./server/routes/users"));
 
 const port = 5001;
+
 app.listen(port, () => {
 	console.log(`Server Running at ${port}`);
 });
