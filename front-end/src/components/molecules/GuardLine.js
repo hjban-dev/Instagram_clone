@@ -4,13 +4,13 @@ import P from "../atoms/P";
 
 function GuardLine() {
 	return (
-		<LindStyled>
+		<LineStyled>
 			<P>또는</P>
-		</LindStyled>
+		</LineStyled>
 	);
 }
 
-const LindStyled = styled.div`
+const LineStyled = styled.div`
 	position: relative;
 	width: 100%;
 	margin: 10px 0 18px;

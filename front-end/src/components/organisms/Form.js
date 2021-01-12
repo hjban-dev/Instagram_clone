@@ -29,7 +29,6 @@ function Form(props) {
 					} else {
 						alert("잘못된 비밀번호입니다. 다시 확인하세요.");
 					}
-					// props.history.push("/");
 				})
 				.catch((error) => {
 					console.log("error : ", error);

@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-const config = require("./server/config/key");
+const config = require("./back-end/config/key");
 const mongoose = require("mongoose");
 mongoose
 	.connect(config.mongoURI, {
@@ -19,10 +19,10 @@ mongoose
 		useCreateIndex: true,
 		useFindAndModify: false,
 	})
-	.then(() => console.log("MongoDB connected..."))
+	.then(() => console.log("MongoDB connecte6d..."))
 	.catch((err) => console.log(err));
 
-app.use("/api/users", require("./server/routes/users"));
+app.use("/api/users", require("./back-end/routes/users"));
 
 const port = 5001;
 
