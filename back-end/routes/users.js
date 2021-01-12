@@ -27,13 +27,12 @@ router.post("/register", (req, res) => {
 router.post("/login", (req, res) => {
 	User.findOne({ email: req.body.email }, (err, user) => {
 		req.user = user;
-		if (!user || err)
+		if (!user)
 			return res.json({
-				success: false,
-				err,
+				loginSuccess: false,
+				message: "Auth failed, email not found",
 			});
-
-		res.json({ success: true, isAuth: true });
+		res.json({ loginSuccess: true, isAuth: true });
 	});
 });
 

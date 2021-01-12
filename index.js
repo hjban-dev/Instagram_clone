@@ -24,7 +24,7 @@ mongoose
 
 app.use("/api/users", require("./back-end/routes/users"));
 
-const port = 5001;
+const port = 500;
 
 app.listen(port, () => {
 	console.log(`Server Running at ${port}`);
