@@ -30,9 +30,13 @@ router.post("/login", (req, res) => {
 		if (!user)
 			return res.json({
 				loginSuccess: false,
-				message: "Auth failed, email not found",
+				message: "Email not found",
 			});
-		res.json({ loginSuccess: true, isAuth: true });
+
+		user.checkPassword(req.body.password, (err, isMatch) => {
+			if (!isMatch) return res.json({ loginSuccess: false, message: "Wrong password" });
+			res.json({ loginSuccess: true, isAuth: true });
+		});
 	});
 });
 

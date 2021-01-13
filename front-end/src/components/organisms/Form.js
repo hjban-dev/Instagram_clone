@@ -30,23 +30,11 @@ function Form(props) {
 				if (response.payload.loginSuccess) {
 					props.history.push("/");
 				} else {
-					alert("error");
+					alert("잘못된 비밀번호입니다. 다시 확인하세요.");
 				}
 			});
 
 			Axios.post("/api/users/login", body).then((res) => {});
-
-			// Axios.post("http://localhost:5001/api/users/login", body)
-			// 	.then((response) => {
-			// 		if (response.data.loginSuccess) {
-			// 			props.history.push("/feed");
-			// 		} else {
-			// 			alert("잘못된 비밀번호입니다. 다시 확인하세요.");
-			// 		}
-			// 	})
-			// 	.catch((error) => {
-			// 		console.log("error : ", error);
-			// 	});
 		} else {
 			body = { email: inputElem[0].current.value, name: inputElem[1].current.value, nickname: inputElem[2].current.value, password: inputElem[3].current.value };
 

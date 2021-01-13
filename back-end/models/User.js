@@ -21,5 +21,10 @@ const userSchema = Schema({
 	},
 });
 
+userSchema.methods.checkPassword = function (plainPassword, cb) {
+	let isMAtch = plainPassword === this.password;
+	cb(null, isMAtch);
+};
+
 const User = mongoose.model("User", userSchema);
 module.exports = { User };
