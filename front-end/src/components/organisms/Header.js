@@ -8,6 +8,7 @@ function Header() {
 		width: "103px",
 		height: "29px",
 		backgroundPosition: "-122px -226px",
+		verticalAlign: "bottom",
 	};
 
 	return (
@@ -37,16 +38,19 @@ const HeaderStyled = styled.header`
 	padding: 0 20px;
 	background-color: #fff;
 	.header_home {
-		flex: 1 1 0;
+		flex: 1 9999 0%;
 	}
 	.header_logo {
-		flex: 1 1 auto;
 		min-width: 103px;
 		width: 103px;
 		text-align: center;
+		flex: 0 1 auto;
 	}
 	.header_gnb {
 		flex: 1 0 0;
+		ul {
+			justify-content: flex-end;
+		}
 	}
 `;
 
