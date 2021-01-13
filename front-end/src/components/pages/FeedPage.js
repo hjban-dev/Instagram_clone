@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import Header from "../organisms/Header";
 import Feeding from "../templates/Feeding";
-import LandingWrap from "../templates/LandingWrap";
+import FeedWrap from "../templates/FeedWrap";
 
 export class FeedPage extends Component {
 	render() {
 		return (
-			<LandingWrap>
+			<FeedWrap>
 				<Header />
 				<main>
 					<Feeding />
 				</main>
-			</LandingWrap>
+			</FeedWrap>
 		);
 	}
 }
