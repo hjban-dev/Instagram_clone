@@ -12,6 +12,7 @@ function FeedLeft() {
 
 const LeftStyled = styled.div`
 	float: left;
+	width: 85%;
 `;
 
 export default FeedLeft;
