@@ -14,9 +14,6 @@ const uploadSchema = Schema(
 		description: {
 			type: String,
 		},
-		privacy: {
-			type: Number,
-		},
 		filePath: {
 			type: String,
 		},

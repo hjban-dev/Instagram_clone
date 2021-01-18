@@ -1,12 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useDropzone } from "react-dropzone";
+import { withRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
-function HeaderGnb() {
+function HeaderGnb(props) {
+	const user = useSelector((state) => state.user);
+
+	// console.log(user.loginData);
+
 	const { getRootProps, getInputProps } = useDropzone({
 		noDrag: true,
 		onDrop: (files) => {
-			console.log(files);
+			// console.log(files);
+
+			let formData = new FormData();
+
+			const config = {
+				header: { "content-type": "mutipart/form-data" },
+			};
+
+			formData.append("file", files[0]);
+
+			axios.post("/api/upload/files", formData, config).then((response) => {
+				if (response.data.success) {
+					const variable = {
+						writer: user.loginData._id,
+						title: "",
+						description: "",
+						filePath: response.data.url,
+					};
+					axios.post("api/upload/save", variable).then((response) => {
+						if (response.data.success) {
+							props.history.push("/upload");
+						} else {
+							alert("Video info was not saved!");
+						}
+					});
+				} else {
+					alert("Only image files are allowed!");
+				}
+			});
 		},
 	});
 
@@ -82,4 +117,4 @@ const GnbStyled = styled.ul`
 	}
 `;
 
-export default HeaderGnb;
+export default withRouter(HeaderGnb);

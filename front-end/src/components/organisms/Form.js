@@ -28,7 +28,7 @@ function Form(props) {
 			dispatch(loginUser(body)).then((response) => {
 				console.log(response);
 				if (response.payload.loginSuccess) {
-					props.history.push("/");
+					props.history.push("/feed");
 				} else {
 					alert("잘못된 비밀번호입니다. 다시 확인하세요.");
 				}

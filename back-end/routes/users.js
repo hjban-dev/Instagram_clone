@@ -34,8 +34,15 @@ router.post("/login", (req, res) => {
 			});
 
 		user.checkPassword(req.body.password, (err, isMatch) => {
+			// console.log(req);
 			if (!isMatch) return res.json({ loginSuccess: false, message: "Wrong password" });
-			res.json({ loginSuccess: true, isAuth: true });
+			res.json({
+				loginSuccess: true,
+				isAuth: true,
+				_id: req.user._id,
+				name: req.user.name,
+				nickname: req.user.nickname,
+			});
 		});
 	});
 });

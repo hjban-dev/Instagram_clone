@@ -23,6 +23,7 @@ mongoose
 	.catch((err) => console.log(err));
 
 app.use("/api/users", require("./back-end/routes/users"));
+app.use("/api/upload", require("./back-end/routes/upload"));
 
 const port = 500;
 
