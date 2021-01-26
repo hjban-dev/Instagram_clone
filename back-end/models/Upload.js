@@ -7,10 +7,6 @@ const uploadSchema = Schema(
 			type: Schema.Types.ObjectId,
 			ref: "User",
 		},
-		title: {
-			type: String,
-			maxlength: 250,
-		},
 		description: {
 			type: String,
 		},

@@ -32,8 +32,6 @@ let upload = multer({
 }).single("file");
 
 router.post("/files", (req, res) => {
-	console.log(storage);
-
 	upload(req, res, (err) => {
 		if (err) res.json({ success: false, err });
 		return res.json({ success: true, url: res.req.file.path, fileName: res.req.file.filename });
@@ -47,15 +45,6 @@ router.post("/save", (req, res) => {
 		if (err) return res.json({ success: false, err });
 		res.json({ success: true });
 	});
-});
-
-router.post("/getUpload", (req, res) => {
-	Upload.find()
-		.populate("writer")
-		.exec((err, videos) => {
-			if (err) res.status(400).send(err);
-			res.status(200).json({ success: true, videos });
-		});
 });
 
 module.exports = router;
